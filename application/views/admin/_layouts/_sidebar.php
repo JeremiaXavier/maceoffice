@@ -1,7 +1,16 @@
 <aside class="navbar-aside" id="offcanvas_aside">
     <div class="aside-top">
         <a href="<?= base_url() ?>adminhome" class="brand-wrap">
-            <h1><span class="text-primary">MACE</span> Office</h1>
+            <div class="d-flex align-items-center">
+            <img src="<?= base_url() ?>assets/admin/img/college-logo.jpeg"
+             class="img-fluid me-2 sidebar-logo"
+             style="height:40px;"
+             alt="Mar Athanasius College of Engineering">
+        <span class="brand-text fw-bold sidebar-title" style="font-size:14px;">
+            Mar Athanasius College of Engineering
+        </span>
+            </div>
+           
         </a>
         <div>
             <button class="btn btn-icon btn-aside-minimize"><i class="text-muted material-icons md-menu_open"></i></button>
