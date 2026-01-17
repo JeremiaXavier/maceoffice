@@ -1,12 +1,24 @@
 <header class="main-header navbar">
   <div class="col-search">
-
+    <div class="form-inline">
+      <div class="input-group" data-widget="navbar-search">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search menu..." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar">
+            <i class="fa fa-fw fa-search"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="navbar-search-results" style="display: none;">
+        <div class="list-group"></div>
+      </div>
+    </div>
   </div>
+  
   <div class="col-nav">
     <button class="btn btn-icon btn-mobile me-auto" data-trigger="#offcanvas_aside"><i class="material-icons md-apps"></i></button>
     <ul class="nav">
-
-
       <li class="nav-item">
         <a class="nav-link btn-icon translate-modal"> <i class="material-icons md-translate"></i> </a>
       </li>
@@ -22,9 +34,7 @@
       <li class="nav-item">
         <a class="requestfullscreen nav-link btn-icon"><i class="material-icons md-cast"></i></a>
       </li>
-
-
-
+      
       <li class="dropdown nav-item">
         <a class="dropdown-toggle" data-bs-toggle="dropdown" id="dropdownAccount" aria-expanded="false">
           <div class="avatar ml-15" style="object-fit: cover;">

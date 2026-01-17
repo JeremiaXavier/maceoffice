@@ -20,15 +20,13 @@
 
 
     <div class="sidebar-user text-center">
-
         <h6 class="mt-3 text-primary"><?= ss('full_name') ?></h6>
         <p class="mb-0 font-roboto text-muted">Admin</p>
-
     </div>
 
     <hr>
 
-    <div class="form-inline" style="margin: 1rem;">
+   <!--  <div class="form-inline" style="margin: 1rem;">
         <div class="input-group" data-widget="sidebar-search">
             <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -43,12 +41,11 @@
             </div>
         </div>
     </div>
+ -->
 
 
 
 
-
-    <hr>
 
 
 
