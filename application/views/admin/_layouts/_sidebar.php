@@ -2,18 +2,17 @@
     <div class="aside-top">
         <a href="<?= base_url() ?>adminhome" class="brand-wrap">
             <div class="d-flex align-items-center">
-            <img src="<?= base_url() ?>assets/admin/img/college-logo.jpeg"
-             class="img-fluid me-2 sidebar-logo"
-             style="height:40px;"
-             alt="Mar Athanasius College of Engineering">
-        <span class="brand-text fw-bold sidebar-title" style="font-size:14px;">
-            Mar Athanasius College of Engineering
-        </span>
+                <img src="<?= base_url() ?>assets/admin/img/college-logo.jpeg" class="img-fluid me-2 sidebar-logo"
+                    style="height:40px;" alt="Mar Athanasius College of Engineering">
+                <span class="brand-text fw-bold sidebar-title" style="font-size:14px;">
+                    Mar Athanasius College of Engineering
+                </span>
             </div>
-           
+
         </a>
         <div>
-            <button class="btn btn-icon btn-aside-minimize"><i class="text-muted material-icons md-menu_open"></i></button>
+            <button class="btn btn-icon btn-aside-minimize"><i
+                    class="text-muted material-icons md-menu_open"></i></button>
         </div>
     </div>
 
@@ -26,7 +25,7 @@
 
     <hr>
 
-   <!--  <div class="form-inline" style="margin: 1rem;">
+    <!--  <div class="form-inline" style="margin: 1rem;">
         <div class="input-group" data-widget="sidebar-search">
             <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -65,9 +64,12 @@
                     <span class="text">Guest Employees</span>
                 </a>
                 <div class="submenu" style="display: none;">
-                    <a class=" menu-navlinks" data-parent="Guest Employees" href="<?= base_url() ?>admin/guest_employees">Guest Employees</a>
-                    <a class=" menu-navlinks" data-parent="Guest Employees" href="<?= base_url() ?>admin/guest_reports">Guest Employees report</a>
-                    <a class=" menu-navlinks" data-parent="Guest Employees" href="<?= base_url() ?>admin/orders">Guest Employees report orders</a>
+                    <a class=" menu-navlinks" data-parent="Guest Employees"
+                        href="<?= base_url() ?>admin/guest_employees">Guest Employees</a>
+                    <a class=" menu-navlinks" data-parent="Guest Employees"
+                        href="<?= base_url() ?>admin/guest_reports">Guest Employees report</a>
+                    <a class=" menu-navlinks" data-parent="Guest Employees" href="<?= base_url() ?>admin/orders">Guest
+                        Employees report orders</a>
                 </div>
             </li>
 
@@ -78,9 +80,12 @@
                     <span class="text">Permanent Employees</span>
                 </a>
                 <div class="submenu" style="display: none;">
-                    <a class=" menu-navlinks" data-parent="Permanent Employees" href="<?= base_url() ?>admin/permanent_employees">Permanent Employees (PEN)</a>
-                    <a class=" menu-navlinks" data-parent="Permanent Employees" href="<?= base_url() ?>admin/permanent_employees/data">Permanent Employees Data</a>
-                    <a class=" menu-navlinks" data-parent="Permanent Employees" href="<?= base_url() ?>admin/permanent_employees_reports">Permanent Employees report</a>
+                    <a class=" menu-navlinks" data-parent="Permanent Employees"
+                        href="<?= base_url() ?>admin/permanent_employees">Permanent Employees (PEN)</a>
+                    <a class=" menu-navlinks" data-parent="Permanent Employees"
+                        href="<?= base_url() ?>admin/permanent_employees/data">Permanent Employees Data</a>
+                    <a class=" menu-navlinks" data-parent="Permanent Employees"
+                        href="<?= base_url() ?>admin/permanent_employees_reports">Permanent Employees report</a>
                 </div>
             </li>
 
@@ -92,11 +97,16 @@
                     <span class="text">Reports </span>
                 </a>
                 <div class="submenu" style="display: none;">
-                    <a class=" menu-navlinks" data-parent="Reports" href="<?= base_url() ?>admin/promotion_reports">Promotion Reports</a>
-                    <a class=" menu-navlinks" data-parent="Reports" href="<?= base_url() ?>admin/grade_promotion_reports">Grade Promotion Reports</a>
-                    <a class=" menu-navlinks" data-parent="Reports" href="<?= base_url() ?>admin/probation_reports">Probation Reports</a>
-                    <a class=" menu-navlinks" data-parent="Reports" href="<?= base_url() ?>admin/appoinment_reports">Appoinment Reports</a>
-                    <a class=" menu-navlinks" data-parent="Reports" href="<?= base_url() ?>admin/confirmation_reports">Confirmation Reports</a>
+                    <a class=" menu-navlinks" data-parent="Reports"
+                        href="<?= base_url() ?>admin/promotion_reports">Promotion Reports</a>
+                    <a class=" menu-navlinks" data-parent="Reports"
+                        href="<?= base_url() ?>admin/grade_promotion_reports">Grade Promotion Reports</a>
+                    <a class=" menu-navlinks" data-parent="Reports"
+                        href="<?= base_url() ?>admin/probation_reports">Probation Reports</a>
+                    <a class=" menu-navlinks" data-parent="Reports"
+                        href="<?= base_url() ?>admin/appoinment_reports">Appoinment Reports</a>
+                    <a class=" menu-navlinks" data-parent="Reports"
+                        href="<?= base_url() ?>admin/confirmation_reports">Confirmation Reports</a>
                 </div>
             </li>
 
@@ -109,9 +119,12 @@
                     <span class="text">Miscellaneous </span>
                 </a>
                 <div class="submenu" style="display: none;">
-                    <a class=" menu-navlinks" data-parent="Miscellaneous" href="<?= base_url() ?>admin/departments">Departments</a>
-                    <a class=" menu-navlinks" data-parent="Miscellaneous" href="<?= base_url() ?>admin/designations">Desginations</a>
-                    <a class=" menu-navlinks" data-parent="Miscellaneous" href="<?= base_url() ?>admin/scale_of_pay">Scale of Pay</a>
+                    <a class=" menu-navlinks" data-parent="Miscellaneous"
+                        href="<?= base_url() ?>admin/departments">Departments</a>
+                    <a class=" menu-navlinks" data-parent="Miscellaneous"
+                        href="<?= base_url() ?>admin/designations">Desginations</a>
+                    <a class=" menu-navlinks" data-parent="Miscellaneous"
+                        href="<?= base_url() ?>admin/scale_of_pay">Scale of Pay</a>
                 </div>
             </li>
 
@@ -125,9 +138,12 @@
                 </a>
                 <div class="submenu" style="display: none;">
                     <a class=" menu-navlinks" data-parent="Letters" href="<?= base_url() ?>admin/letters">Letters</a>
-                    <a class=" menu-navlinks" data-parent="Letters" href="<?= base_url() ?>admin/letters/senders">Senders</a>
-                    <a class=" menu-navlinks" data-parent="Letters" href="<?= base_url() ?>admin/letters/receivers">Receivers</a>
-                    <a class=" menu-navlinks" data-parent="Letters" href="<?= base_url() ?>admin/letters/orders">Orders</a>
+                    <a class=" menu-navlinks" data-parent="Letters"
+                        href="<?= base_url() ?>admin/letters/senders">Senders</a>
+                    <a class=" menu-navlinks" data-parent="Letters"
+                        href="<?= base_url() ?>admin/letters/receivers">Receivers</a>
+                    <a class=" menu-navlinks" data-parent="Letters"
+                        href="<?= base_url() ?>admin/letters/orders">Orders</a>
                 </div>
             </li>
 
@@ -170,7 +186,7 @@
         $(".menu-item").removeClass('active');
         let menu_elems = $('.menu-item');
         const active_menu = $('#active-menu-link').attr('data-id');
-        $.each(menu_elems, function(index, elems) {
+        $.each(menu_elems, function (index, elems) {
             if (active_menu == elems.dataset.id) {
                 elems.classList.add('active');
                 elems.click();

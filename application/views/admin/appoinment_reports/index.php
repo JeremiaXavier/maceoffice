@@ -8,7 +8,7 @@
   <section class="content-main">
       <div class="content-header">
           <div>
-              <h2 class="content-title card-title">Appoinment reports List</h2>
+              <h4 class="content-title card-title">Appoinment reports List</h4>
               <p>List of Appoinment reports uploaded in this portal.</p>
           </div>
       </div>

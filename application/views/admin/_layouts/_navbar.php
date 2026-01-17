@@ -1,3 +1,17 @@
+<style>
+  .col-search {
+    position: relative;
+}
+
+.navbar-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+</style>
 <header class="main-header navbar">
   <div class="col-search">
     <div class="form-inline">
@@ -15,14 +29,14 @@
       </div>
     </div>
   </div>
-  
+
   <div class="col-nav">
     <button class="btn btn-icon btn-mobile me-auto" data-trigger="#offcanvas_aside"><i class="material-icons md-apps"></i></button>
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link btn-icon translate-modal"> <i class="material-icons md-translate"></i> </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link btn-icon" onclick="window.location.reload(true)"> <i class="material-icons md-refresh"></i> </a>
       </li>
       <li class="nav-item">
@@ -33,7 +47,7 @@
       </li>
       <li class="nav-item">
         <a class="requestfullscreen nav-link btn-icon"><i class="material-icons md-cast"></i></a>
-      </li>
+      </li> -->
       
       <li class="dropdown nav-item">
         <a class="dropdown-toggle" data-bs-toggle="dropdown" id="dropdownAccount" aria-expanded="false">

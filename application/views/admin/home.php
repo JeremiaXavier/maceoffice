@@ -1,373 +1,240 @@
+<style>
+  .col-search {
+    position: relative;
+  }
+
+  .navbar-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  /* Menu Cards Styling */
+  .menu-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    color: inherit;
+    height: 100%;
+    text-decoration: none;
+    display: block;
+  }
+
+  .menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    text-decoration: none;
+  }
+
+  .menu-card .card-body {
+    padding: 24px;
+    text-align: center;
+  }
+
+  .menu-card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+
+  .menu-card-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .menu-card-subtitle {
+    color: #999;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .content-header {
+    margin-bottom: 24px;
+  }
+
+  .content-header h2 {
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  /* Color variations */
+  .bg-gradient-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .bg-gradient-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .bg-gradient-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .bg-gradient-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+  .bg-gradient-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .bg-gradient-6 { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+  .bg-gradient-7 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+  .bg-gradient-8 { background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%); }
+</style>
+
+<er>
+
 <section class="content-main">
-  <div class="content-header">
-    <div>
-      <h2 class="content-title card-title">Dashboard</h2>
-      <p>Whole data about your portal here</p>
-    </div>
-    <div>
-      <a href="#" class="btn btn-primary"><i class="text-muted material-icons md-post_add"></i>Save details</a>
-    </div>
-  </div>
-
-
-  <?php /*
-<!---row--->
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="card card-body mb-4">
-        <article class="icontext">
-          <span class="icon icon-sm rounded-circle bg-primary-light"><i class="text-primary material-icons md-monetization_on"></i></span>
-          <div class="text">
-            <h6 class="mb-1 card-title">Revenue</h6>
-            <span>₹13,456.5</span>
-            <span class="text-sm"> Both sessions and prescriptions </span>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div class="card card-body mb-4">
-        <article class="icontext">
-          <span class="icon icon-sm rounded-circle bg-success-light"><i class="text-success material-icons md-local_shipping"></i></span>
-          <div class="text">
-            <h6 class="mb-1 card-title">Total Sessions</h6>
-            <span>53</span>
-            <span class="text-sm"> Total number of finished sessions </span>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div class="card card-body mb-4">
-        <article class="icontext">
-          <span class="icon icon-sm rounded-circle bg-warning-light"><i class="text-warning material-icons md-qr_code"></i></span>
-          <div class="text">
-            <h6 class="mb-1 card-title">Patients</h6>
-            <span>13</span>
-            <span class="text-sm"> All patients regstered in this portal </span>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div class="card card-body mb-4">
-        <article class="icontext">
-          <span class="icon icon-sm rounded-circle bg-info-light"><i class="text-info material-icons md-shopping_basket"></i></span>
-          <div class="text">
-            <h6 class="mb-1 card-title">Sessions Today</h6>
-            <span>6</span>
-            <span class="text-sm"> Unfinished sessions this day </span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-<!---row--->
-
-
-
-<!---row--->
-  <div class="row">
-    <div class="col-md-8 col-xl-8 col-lg-12">
-      <div class="card mb-4">
-        <article class="card-body">
-          <h5 class="card-title">Session statistics</h5>
-          <canvas id="myChart" height="140px"></canvas>
-        </article>
-      </div>
+    <div class="content-header">
+        
+        <p class="text-muted">Quick access to all menu items</p>
     </div>
 
-    <div class="col-md-4 col-xl-4">
-      <div class="card mb-4">
-        <article class="card-body">
-          <h5 class="card-title">Recent activities</h5>
-          <ul class="verti-timeline list-unstyled font-sm">
-            <li class="event-list">
-              <div class="event-timeline-dot">
-                <i class="material-icons md-play_circle_outline font-xxl"></i>
-              </div>
-              <div class="media">
-                <div class="me-3">
-                  <h6><span>Today</span> <i class="material-icons md-trending_flat text-brand ml-15 d-inline-block"></i></h6>
-                </div>
-                <div class="media-body">
-                  <div>Lorem ipsum dolor sit amet consectetur</div>
-                </div>
-              </div>
-            </li>
-            <li class="event-list active">
-              <div class="event-timeline-dot">
-                <i class="material-icons md-play_circle_outline font-xxl animation-fade-right"></i>
-              </div>
-              <div class="media">
-                <div class="me-3">
-                  <h6><span>17 May</span> <i class="material-icons md-trending_flat text-brand ml-15 d-inline-block"></i></h6>
-                </div>
-                <div class="media-body">
-                  <div>Debitis nesciunt voluptatum dicta reprehenderit</div>
-                </div>
-              </div>
-            </li>
-            <li class="event-list">
-              <div class="event-timeline-dot">
-                <i class="material-icons md-play_circle_outline font-xxl"></i>
-              </div>
-              <div class="media">
-                <div class="me-3">
-                  <h6><span>13 May</span> <i class="material-icons md-trending_flat text-brand ml-15 d-inline-block"></i></h6>
-                </div>
-                <div class="media-body">
-                  <div>Accusamus voluptatibus voluptas.</div>
-                </div>
-              </div>
-            </li>
-            <li class="event-list">
-              <div class="event-timeline-dot">
-                <i class="material-icons md-play_circle_outline font-xxl"></i>
-              </div>
-              <div class="media">
-                <div class="me-3">
-                  <h6><span>05 April</span> <i class="material-icons md-trending_flat text-brand ml-15 d-inline-block"></i></h6>
-                </div>
-                <div class="media-body">
-                  <div>At vero eos et accusamus et iusto odio dignissi</div>
-                </div>
-              </div>
-            </li>
-
-          </ul>
-        </article>
-      </div>
+    <!-- Dynamic Menu Cards Container -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3" id="dashboard-menu-cards">
+        <!-- Cards will be generated here dynamically -->
     </div>
-  </div>
-<!---row--->
-
-
-
-<!---row--->
-  <div class="row">
-    <div class="col-lg-5">
-      <div class="card mb-4">
-        <article class="card-body">
-          <h5 class="card-title">New Registrations</h5>
-          <div class="new-member-list">
-            <div class="d-flex align-items-center justify-content-between mb-4">
-              <div class="d-flex align-items-center">
-                <img src="<?= base_url() ?>assets/admin/imgs/people/avatar-4.png" alt="" class="avatar" />
-                <div>
-                  <h6>Patric Adams</h6>
-                  <p class="text-muted font-xs">Muvatupuzha</p>
-                </div>
-              </div>
-              <span class="badge badge-pill badge-soft-danger">Due</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between mb-4">
-              <div class="d-flex align-items-center">
-                <img src="<?= base_url() ?>assets/admin/imgs/people/avatar-2.png" alt="" class="avatar" />
-                <div>
-                  <h6>Dilan Specter</h6>
-                  <p class="text-muted font-xs">Thankalam</p>
-                </div>
-              </div>
-              <span class="badge badge-pill badge-soft-success">Paid</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between mb-4">
-              <div class="d-flex align-items-center">
-                <img src="<?= base_url() ?>assets/admin/imgs/people/avatar-3.png" alt="" class="avatar" />
-                <div>
-                  <h6>Tomas Baker</h6>
-                  <p class="text-muted font-xs">Kothamangalam</p>
-                </div>
-              </div>
-              <span class="badge badge-pill badge-soft-success">Paid</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-
-
-
-    <div class="col-xl-4 col-lg-12">
-      <div class="card mb-4">
-        <article class="card-body">
-          <h5 class="card-title">Registrations</h5>
-          <canvas id="myChart2" height="217"></canvas>
-        </article>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card mb-4">
-        <article class="card-body">
-          <h5 class="card-title">Session Medium</h5>
-          <span class="text-muted font-xs">Zoom</span>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 55%">55%</div>
-          </div>
-          <span class="text-muted font-xs">Meet</span>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 15%">15%</div>
-          </div>
-          <span class="text-muted font-xs">Voice call</span>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 65%">65%</div>
-          </div>
-          <span class="text-muted font-xs">Text</span>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 51%">51%</div>
-          </div>
-         
-          
-        </article>
-      </div>
-    </div>
-  </div>
-<!---row--->
-
-
-
-
-<!---row--->
-  <div class="row">
-    <div class="card mb-4">
-      <header class="card-header">
-        <h4 class="card-title">Latest sessions</h4>
-        <div class="row align-items-center">
-          <div class="col-md-3 col-12 me-auto mb-md-0 mb-3">
-          </div>
-          <div class="col-md-2 col-6">
-            <input type="date" value="02.05.2021" class="form-control" />
-          </div>
-          <div class="col-md-2 col-6">
-              <select class="form-select">
-                <option selected>Paid</option>
-                <option>Due</option>
-              </select>
-          </div>
-        </div>
-      </header>
-      <div class="card-body">
-        <div class="table-responsive">
-          <div class="table-responsive">
-            <table class="table align-middle table-nowrap mb-0">
-              <thead class="table-light">
-                <tr>
-                  <th class="align-middle" scope="col">Order ID</th>
-                  <th class="align-middle" scope="col">Billing Name</th>
-                  <th class="align-middle" scope="col">Date</th>
-                  <th class="align-middle" scope="col">Total</th>
-                  <th class="align-middle" scope="col">Payment Status</th>
-                  <th class="align-middle" scope="col">Payment Method</th>
-                  <th class="align-middle" scope="col">View Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="#" class="fw-bold">#SK2540</a></td>
-                  <td>Neal Matthews</td>
-                  <td>07 Oct, 2021</td>
-                  <td>$400</td>
-                  <td>
-                    <span class="badge badge-pill badge-soft-success">Paid</span>
-                  </td>
-                  <td><i class="material-icons md-payment font-xxl text-muted mr-5"></i> Mastercard</td>
-                  <td>
-                    <a href="#" class="btn btn-xs"> View details</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a href="#" class="fw-bold">#SK2541</a></td>
-                  <td>Jamal Burnett</td>
-                  <td>07 Oct, 2021</td>
-                  <td>$380</td>
-                  <td>
-                    <span class="badge badge-pill badge-soft-danger">Due</span>
-                  </td>
-                  <td><i class="material-icons md-payment font-xxl text-muted mr-5"></i> Visa</td>
-                  <td>
-                    <a href="#" class="btn btn-xs"> View details</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a href="#" class="fw-bold">#SK2542</a></td>
-                  <td>Juan Mitchell</td>
-                  <td>06 Oct, 2021</td>
-                  <td>$384</td>
-                  <td>
-                    <span class="badge badge-pill badge-soft-success">Paid</span>
-                  </td>
-                  <td><i class="material-icons md-payment font-xxl text-muted mr-5"></i> Paypal</td>
-                  <td>
-                    <a href="#" class="btn btn-xs"> View details</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a href="#" class="fw-bold">#SK2543</a></td>
-                  <td>Barry Dick</td>
-                  <td>05 Oct, 2021</td>
-                  <td>$412</td>
-                  <td>
-                    <span class="badge badge-pill badge-soft-success">Paid</span>
-                  </td>
-                  <td><i class="material-icons md-payment font-xxl text-muted mr-5"></i> Mastercard</td>
-                  <td>
-                    <a href="#" class="btn btn-xs"> View details</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a href="#" class="fw-bold">#SK2544</a></td>
-                  <td>Ronald Taylor</td>
-                  <td>04 Oct, 2021</td>
-                  <td>$404</td>
-                  <td>
-                    <span class="badge badge-pill badge-soft-danger">Due</span>
-                  </td>
-                  <td><i class="material-icons md-payment font-xxl text-muted mr-5"></i> Visa</td>
-                  <td>
-                    <a href="#" class="btn btn-xs"> View details</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a href="#" class="fw-bold">#SK2545</a></td>
-                  <td>Jacob Hunter</td>
-                  <td>04 Oct, 2021</td>
-                  <td>$392</td>
-                  <td>
-                    <span class="badge badge-pill badge-soft-success">Paid</span>
-                  </td>
-                  <td><i class="material-icons md-payment font-xxl text-muted mr-5"></i> Paypal</td>
-                  <td>
-                    <a href="#" class="btn btn-xs"> View details</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <!-- table-responsive end// -->
-      </div>
-    </div>
-    <div class="pagination-area mt-30 mb-50">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-start">
-          <li class="page-item active"><a class="page-link" href="#">01</a></li>
-          <li class="page-item"><a class="page-link" href="#">02</a></li>
-          <li class="page-item"><a class="page-link" href="#">03</a></li>
-          <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-          <li class="page-item"><a class="page-link" href="#">16</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#"><i class="material-icons md-chevron_right"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-<!---row--->
-
-*/ ?>
-
 </section>
-
 
 <script src="<?= base_url() ?>assets/admin/js/vendors/chart.js"></script>
 <script src="<?= base_url() ?>assets/admin/js/custom-chart.js" type="text/javascript"></script>
+
+<script>
+// Generate dashboard cards from sidebar menu
+function generateDashboardCards() {
+    var nav_items = document.getElementById('dashboard_menus').getElementsByClassName('menu-navlinks');
+    var cards_html = '';
+    
+    var gradients = [
+        'bg-gradient-1', 'bg-gradient-2', 'bg-gradient-3', 'bg-gradient-4',
+        'bg-gradient-5', 'bg-gradient-6', 'bg-gradient-7', 'bg-gradient-8'
+    ];
+    
+    for (var i = 0; i < nav_items.length; i++) {
+        var gradient_class = gradients[i % gradients.length];
+        var menu_text = nav_items[i].innerText.trim();
+        var menu_href = nav_items[i].href;
+        var menu_parent = nav_items[i].dataset.parent ? nav_items[i].dataset.parent : '';
+        
+        // Try to get icon from the menu item
+        var icon_element = nav_items[i].querySelector('i');
+        var icon_class = icon_element ? icon_element.className : 'material-icons md-dashboard';
+        
+        cards_html += `
+            <div class="col">
+                <a href="${menu_href}" class="menu-card">
+                    <div class="card-body">
+                        <div class="menu-card-icon ${gradient_class}">
+                            <i class="${icon_class}" style="color: white;"></i>
+                        </div>
+                        <h5 class="menu-card-title">${menu_text}</h5>
+                        ${menu_parent ? `<p class="menu-card-subtitle">${menu_parent}</p>` : ''}
+                    </div>
+                </a>
+            </div>
+        `;
+    }
+    
+    document.getElementById('dashboard-menu-cards').innerHTML = cards_html;
+}
+
+// Generate cards when page loads
+$(document).ready(function() {
+    generateDashboardCards();
+});
+
+// Navbar search functionality
+$(document).on('keyup', '.form-control-navbar', function (e) {
+    e.preventDefault();
+    
+    let clear_btn = '<i class="fa fa-fw fa-times clear-in-searchbar"></i>';
+    let search_btn = '<i class="fa fa-fw fa-search search-in-searchbar"></i>';
+    
+    let search_keyword = $('.form-control-navbar').val().toLowerCase();
+    
+    if (search_keyword.length > 1) {
+        $('.btn-navbar').html(clear_btn);
+        search_forkeyword_navbar(search_keyword);
+    } else {
+        $('.btn-navbar').html(search_btn);
+        $('.navbar-search-results .list-group').html('');
+        $('.navbar-search-results').hide();
+    }
+    
+    navigate_throughNavbarResults(e.keyCode);
+});
+
+function navigate_throughNavbarResults(keyCode) {
+    if (keyCode == 38) {
+        $('.navbar-search-results .list-group').children().last().focus();
+        return;
+    }
+    if (keyCode == 40) {
+        $('.navbar-search-results .list-group').children().first().focus();
+        return;
+    }
+}
+
+function search_forkeyword_navbar(search_keyword) {
+    if (search_keyword.length > 1) {
+        $('.navbar-search-results').show();
+    } else {
+        $('.navbar-search-results').hide();
+        return;
+    }
+    
+    let counter = 0;
+    var nav_items = document.getElementById('dashboard_menus').getElementsByClassName('menu-navlinks');
+    var item_in_lower = '';
+    var search_result_html = '';
+    
+    for (var i = 0; i < nav_items.length; i++) {
+        item_in_lower = nav_items[i].innerText.toLowerCase();
+        
+        if (item_in_lower.includes(search_keyword)) {
+            counter++;
+            search_result_html += `
+                <a href="${nav_items[i].href}" class="list-group-item">
+                    <div class="search-title"><strong>${nav_items[i].innerText}</strong></div>
+                    <div class="search-path">${(nav_items[i].dataset.parent) ? nav_items[i].dataset.parent : ''}</div>
+                </a>
+            `;
+        }
+    }
+    
+    if (counter == 0) {
+        search_result_html = `
+            <a class="list-group-item">
+                <div class="search-title">No results found!</div>
+                <div class="search-path"></div>
+            </a>
+        `;
+    }
+    
+    $('.navbar-search-results .list-group').html(search_result_html);
+}
+
+function toggle_navbarSearchAndClear() {
+    let clear_btn = '<i class="fa fa-fw fa-times clear-in-searchbar"></i>';
+    let search_btn = '<i class="fa fa-fw fa-search search-in-searchbar"></i>';
+    
+    if ($('.btn-navbar .search-in-searchbar').is(":visible")) {
+        $('.btn-navbar').html(clear_btn);
+        $('.navbar-search-results').show();
+        let search_keyword = $('.form-control-navbar').val().toLowerCase();
+        search_forkeyword_navbar(search_keyword);
+    } else {
+        $('.btn-navbar').html(search_btn);
+        $('.navbar-search-results').hide();
+        $('.form-control-navbar').val('');
+    }
+}
+
+$(document).on('click', '.btn-navbar', function (e) {
+    e.preventDefault();
+    toggle_navbarSearchAndClear();
+});
+
+$(document).on('click', function(e) {
+    if (!$(e.target).closest('[data-widget="navbar-search"]').length && 
+        !$(e.target).closest('.navbar-search-results').length) {
+        $('.navbar-search-results').hide();
+    }
+});
+</script>
